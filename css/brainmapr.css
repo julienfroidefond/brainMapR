@@ -11,12 +11,12 @@
     -webkit-overflow-scrolling: touch; 
   }
   core-scaffold core-toolbar {
-    background-color: black;
+    /*background-color: black;*/
   }
   core-toolbar {
     background: #03a9f4;
     color: white;
-    background-color: black;
+    /*background-color: black;*/
   }
   core-toolbar.tall {
     height: 221px;
@@ -43,18 +43,6 @@
       width: 400px;
     }
 
-
-#navheader {
-    background: transparent url("../images/brainmapr.png") no-repeat scroll left top;
-}
-
-#infoList .avatar {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    background: #9E9E9E url('../images/avatar-01.svg') no-repeat scroll center center / contain;
-    box-shadow: 1px 1px 2px #000;
-}
 #infoList .description {
     color: black;
     font-weight: 500;
