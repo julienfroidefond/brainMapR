@@ -1,4 +1,4 @@
-# brainR
+# brainMapR
 Polymer sandbox project
 
-Run a bower install for dependencies
+Run a npm install && node app.js

@@ -1,0 +1,66 @@
+
+  html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+    font-family: 'RobotoDraft', sans-serif;
+  }
+  core-header-panel {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+  core-scaffold core-toolbar {
+    background-color: black;
+  }
+  core-toolbar {
+    background: #03a9f4;
+    color: white;
+    background-color: black;
+  }
+  core-toolbar.tall {
+    height: 221px;
+}
+  #tabs {
+    width: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  	text-transform: uppercase;
+  	cursor:pointer;
+  }
+  .container {
+    width: 80%;
+    margin: 30px auto;
+  }
+  @media (min-width: 481px) {
+    #tabs {
+      width: 600px;
+    }
+    .container {
+      width: 400px;
+    }
+
+
+#navheader {
+    background: transparent url("../images/brainmapr.png") no-repeat scroll left top;
+}
+
+#infoList .avatar {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background: #9E9E9E url('../images/avatar-01.svg') no-repeat scroll center center / contain;
+    box-shadow: 1px 1px 2px #000;
+}
+#infoList .description {
+    color: black;
+    font-weight: 500;
+    margin-top:10px;
+}
+
+#preferencesList,#infoList{
+  margin:20px;
+}
