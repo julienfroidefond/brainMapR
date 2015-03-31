@@ -1,6 +1,13 @@
-"dependencies": {
-    "bower": "0.6.x"
-},
-"scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
+{
+	"name": "brainR",
+	"version": "0.0.1",
+	"dependencies": {"bower": "0.6.x"},
+	"devDependencies": {
+	},
+	"engines": {
+	"node": ">=0.10.0"
+	},
+	"scripts": {
+	    "postinstall": "./node_modules/bower/bin/bower install"
+	}
 }
