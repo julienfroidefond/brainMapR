@@ -9,6 +9,6 @@
 	"node": ">=0.10.0"
 	},
 	"scripts": {
-	    "postinstall": "bower cache clean && bower install && node app.js"
+	    "postinstall": "bower cache clean && bower install"
 	}
 }
