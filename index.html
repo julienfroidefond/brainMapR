@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>Brainr</title>
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+  <script src="bower_components/webcomponentsjs/webcomponents.js">
+  </script>
+
+	<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+	<link rel="import" href="bower_components/core-item/core-item.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+	<link rel="import" href="post-card.html">
+<style>
+  html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+    font-family: 'RobotoDraft', sans-serif;
+  }
+  core-header-panel {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+  core-scaffold core-toolbar {
+    background-color: black;
+  }
+  core-toolbar {
+    background: #03a9f4;
+    color: white;
+    background-color: black;
+  }
+  core-toolbar.tall {
+    height: 221px;
+}
+  #tabs {
+    width: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  	text-transform: uppercase;
+  	cursor:pointer;
+  }
+  .container {
+    width: 80%;
+    margin: 30px auto;
+  }
+  @media (min-width: 481px) {
+    #tabs {
+      width: 600px;
+    }
+    .container {
+      width: 400px;
+    }
+
+
+#navheader {
+    background: transparent url("images/brainr.png") no-repeat scroll left top;
+}
+
+#infoList .avatar {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background: #9E9E9E url('images/avatar-01.svg') no-repeat scroll center center / contain;
+    box-shadow: 1px 1px 2px #000;
+}
+#infoList .description {
+    color: black;
+    font-weight: 500;
+    margin-top:10px;
+}
+
+#preferencesList,#infoList{
+  margin:20px;
+}
+</style>
+<body unresolved>
+
+
+<core-scaffold>
+  <core-header-panel navigation flex>
+
+    <section layout vertical center id="infoList">
+      <div class="avatar"></div>
+      <div class="description">I'm <b>Jull</b></div>
+    </section>
+    <section layout vertical id="preferencesList">
+      <core-menu theme="core-light-theme">
+        <core-item icon="settings" label="Preferences"></core-item>
+        <core-item icon="account-circle" label="Account"></core-item>
+      </core-menu>
+    </section>
+
+    <core-toolbar id="navheader" class="tall">
+    </core-toolbar>
+
+  </core-header-panel>
+
+  <div tool layout center horizontal flex>
+    <paper-icon-button id="navicon" icon="arrow-back"></paper-icon-button>
+    <span flex>BrainR</span>
+     <paper-tabs id="tabs" selected="all" self-end>
+        <paper-tab name="all">All ideas</paper-tab>
+        <paper-tab name="wall">Wall ideas</paper-tab>
+        <paper-tab name="my">My ideas</paper-tab>
+        <paper-tab name="favorites">Favorites</paper-tab>
+        <paper-tab name="around">Around me</paper-tab>
+      </paper-tabs>
+    <core-icon icon="search"></core-icon>
+  </div>
+
+    <div class="container" layout vertical center>
+      
+      <post-card>
+        <img class="picture" src="images/avatar-01.svg">
+        <img class="background" src="http://cdns2.freepik.com/free-photo/geometric-vector-background_23-2147489365.jpg">
+        <h2>My awesome idea</h2>
+        <p>
+          Just getting started with Polymer.<br>
+          Feels like the future!
+        </p>
+      </post-card>
+
+
+      <post-card>
+        <img class="picture" src="http://www.mbetv.com/wp-content/uploads/2011/03/Albert-Einstein-281x300.jpg">
+        <img class="background" src="http://www.fulcrumgallery.com/product-images/P700663-10/emc2.jpg">
+        <h2>E = mc2</h2>
+        <p>
+          Une particule isolee de masse en kilogrammes <b>m</b>, possede du fait de cette masse une energie <b>E</b> exprimee en joules appelee energie de masse, donnee par le produit de m par le carre de <b>c</b>, la vitesse de la lumiere.
+        </p>
+      </post-card>
+      
+      
+      <post-card>
+        <img class="picture" src="images/avatar-01.svg">
+        <img class="background" src="http://cdns2.freepik.com/free-photo/_23-2147487152.jpg">
+        <h2>Another idea !</h2>
+        <p>
+          Just getting started with Polymer.<br>
+          Feels like the future!
+        </p>
+      </post-card>
+      
+    </div>
+</core-scaffold>
+
+
+
+
+<script>
+  var tabs = document.querySelector('paper-tabs');
+
+  tabs.addEventListener('core-select', function() {
+    console.log("Selected: " + tabs.selected);
+  });
+</script>
+</body>
